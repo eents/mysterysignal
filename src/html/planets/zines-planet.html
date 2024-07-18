@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../libs/p5.min.js"></script>
+
+    <style>
+        .text1 { font-family: Silvers; fill: var(--base-light); letter-spacing: 1px;}
+
+        @keyframes rotateText {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        text {
+            animation: rotateText 6s linear infinite;
+            transform-origin: center;
+        }
+
+        svg {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function preload() {
+            img = loadImage('../../imgs/index/planet-textures/zines-planet-texture.gif');
+        }
+
+        function setup() {
+            createCanvas(175, 175, WEBGL);
+        }
+  
+        function draw() {
+            rotateY(frameCount * -0.03);
+            rotateZ(frameCount * -0.01);
+            clear();
+            noStroke();
+            texture(img);
+            sphere(40, 3, 2);
+        }
+    </script>
+
+    <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M75,75 m-70,0a70,70 0 1,0 140,0a70,70 0 1,0 -140,0" fill="none" />
+        <text>
+            <textPath xlink:href="#circlePath">
+                <tspan class="text1">Coming Soon</tspan>
+            </textPath>
+        </text>
+    </svg>
+
+    <!-- <a target="_blank" href="https://ko-fi.com/mysterysignal" class="iframe-span-link"></a> -->
+    
+</body>
+</html>

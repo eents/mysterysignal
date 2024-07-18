@@ -1,0 +1,223 @@
+body {
+    background-color: var(--base-dark);
+    background-image: url(../imgs/index/index-bg.gif);
+    overflow: hidden;
+}
+
+
+/* HEADER SECTION */
+
+header {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 1em;
+}
+
+#logo {
+    width: 30em;
+}
+
+#change-subtitle-btn-wrap {
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#change-subtitle-btn {
+    margin: .3em auto 0 auto;
+    z-index: 5;
+    width: 31em;
+    height: 111px;
+}
+
+header h1 {
+  color: var(--base-light);
+  text-align: center;
+  font-size: 1.3em;
+  font-family: OldNewspaperTypes;
+  margin-top: -2px;
+}
+
+
+/* PLANETS SECTION */
+
+#about-planet {
+    position: absolute;
+    top: 14vh;
+    left: -3em;
+    z-index: -2;
+}
+
+#channels-planet {
+    position: absolute;
+    left: 27vw;
+    top: 63vh;
+    z-index: -2;
+}
+
+#hyperlinks-planet {
+    position: absolute;
+    right: 15vw;
+    top: 44vh;
+}
+
+#guestbook-planet {
+    position: absolute;
+    left: 20vw;
+    top: 24vh;
+}
+
+#zines-planet {
+    position: absolute;
+    left: 5vw;
+    bottom: 12vh;
+    z-index: -2;
+}
+
+#neighbors-planet {
+    position: absolute;
+    right: 3vw;
+    top: 9vh;
+}
+
+/* NEIGHBORS SECTION */
+
+@keyframes open-neighbors {
+    from {transform: translateX(222px);}
+    to {transform: translateX(0px);}
+}
+
+@keyframes close-neighbors {
+    from {transform: translateX(0px);}
+    to {transform: translateX(222px);}
+}
+
+#neighbors {
+    background-image: url(../imgs/index/bg-stars-invert.gif);
+    height: 100vh;
+    width: 222px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translateX(222px);
+    animation-name: none;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#open-neighbors-btn {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    right: 3vw;
+    top: 9vh;
+    z-index: 1;
+}
+
+#close-neighbors-btn {
+    display: none;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    top: .3em;
+    right: .3em;
+    width: 2em;
+    height: 2em;
+}
+
+#x-icon-1 {
+    width: 1em;
+    height: 1em;
+}
+
+
+/* CHANNELS SECTION */
+
+@keyframes open-channels {
+    from {transform: translateY(300px);}
+    to {transform: translateY(0px);}
+}
+
+@keyframes close-channels {
+    from {transform: translateY(0px);}
+    to {transform: translateY(300px);}
+}
+
+#channels {
+    background-image: url(../imgs/index/static-3.gif);
+
+    height: 300px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+    transform: translateY(300px);
+    animation-name: none;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#open-channels-btn {
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    left: 27vw;
+    top: 63vh;
+    z-index: 2;
+}
+
+#close-channels-btn {
+    display: none;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    bottom: 255px;
+    right: 10px;
+}
+
+#x-icon-2 {
+    height: 1em;
+    width: 1em;
+}
+
+#open-guide-btn {
+    display: none;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    right: 11px;
+    bottom: 215px;
+}
+
+#guide-icon {
+    width: 1em;
+}
+
+
+/* FOOTER SECTION */
+
+footer {
+    position: absolute;
+    bottom: .5em;
+    right: 1em;
+    z-index: -1;
+}
+
+footer p {
+    color: var(--base-light);
+    font-size: .75em;
+    font-family: CourierPolski1941;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+footer p a {
+    letter-spacing: -.5px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../libs/p5.min.js"></script>
+
+    <style>
+        .text1 { font-family: Silvers; fill: var(--base-light); letter-spacing: 1px;}
+
+        @keyframes rotateText {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        text {
+            animation: rotateText 14s linear infinite;
+            transform-origin: center;
+        }
+
+        svg {
+            position: absolute;
+            left: -55px;
+            top: -55px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function preload() {
+            img = loadImage('../../imgs/index/planet-textures/channels-planet-texture.gif');
+        }
+
+        function setup() {
+            createCanvas(470, 470, WEBGL);
+        }
+
+        function draw() {
+            rotateY(11);
+            rotateY(frameCount * -0.002);
+            noStroke();
+            sphere(180, 12, 12);
+            texture(img);
+        }
+    </script>
+
+    <svg height="580" width="580" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M300,300 m-225,0a225,225 0 1,0 450,0a225,225 0 1,0 -450,0" fill="none" />
+        <text>
+            <textPath xlink:href="#circlePath">
+                <tspan class="text1">Artware Channels</tspan>
+            </textPath>
+        </text>
+    </svg>
+
+    <a target="_parent" href="../broadcasts.html" class="iframe-span-link"></a>
+    
+</body>
+</html>
