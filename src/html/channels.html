@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/channels.css">
+
+    <script src="../libs/jquery-3.7.1.min.js"></script>
+    <script src="../libs/jquery-ui-1.12.1.min.js"></script>
+</head>
+<body onload="startTime()">
+
+    <!-- DEBUG CLOCK
+    <div style="color: white;" id="txt"></div> -->
+
+    <div class="channel-thumbnail">
+        <img class="channel-number" src="../imgs/channels/channel-00-text.png">
+        <iframe id="channel-00-content" src="" frameBorder="0" scrolling="no"></iframe>
+    </div>
+    <div class="channel-thumbnail">
+        <img class="channel-number" src="../imgs/channels/channel-star-text.png">
+        <iframe id="channel-star-content" src="../programs/no-signal/no-signal-min.html" frameBorder="0" scrolling="no"></iframe>
+    </div>
+    <div class="channel-thumbnail">
+        <img class="channel-number" src="../imgs/channels/channel-03-text.png">
+        <iframe id="channel-03-content" src="../programs/no-signal/no-signal-min.html" frameBorder="0" scrolling="no"></iframe>
+    </div>
+    <div class="channel-thumbnail">
+        <img class="channel-number" src="../imgs/channels/channel-11-text.png">
+        <iframe id="channel-11-content" src="../programs/no-signal/no-signal-min.html" frameBorder="0" scrolling="no"></iframe>
+    </div>
+    <div class="channel-thumbnail">
+        <img class="channel-number" src="../imgs/channels/channel-q-text.png">
+        <iframe id="channel-q-content" src="../programs/no-signal/no-signal-min.html" frameBorder="0" scrolling="no"></iframe>
+    </div>
+
+    <script src="../js/channels.js"></script>
+    
+</body>
+</html>

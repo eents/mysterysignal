@@ -1,0 +1,53 @@
+body {
+    width: 222px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+#guide-bg {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em 5px;
+    font-family: DePixel;
+
+    color: var(--base-light);
+}
+
+h1 {
+    font-size: 1.3em;
+    text-align: center;
+    /* font-family: CourierPolski1941; */
+}
+
+h2 {
+    font-size: .9em;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: .6em;
+}
+
+li {
+    border: 1px solid var(--base-light);
+    width: 210px;
+    background-color: var(--base-dark);
+    padding: 4px 3px;
+    font-family: OldNewspaperTypes;
+}
+
+p {
+    border: 1px solid var(--base-light);
+}
+

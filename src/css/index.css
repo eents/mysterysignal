@@ -147,8 +147,7 @@ header h1 {
 }
 
 #channels {
-    background-image: url(../imgs/index/static-3.gif);
-
+    background-image: url(../imgs/channels/channels-bg.gif);
     height: 300px;
     width: 100vw;
     position: absolute;
@@ -198,6 +197,50 @@ header h1 {
 
 #guide-icon {
     width: 1em;
+}
+
+
+/* GUIDE SECTION */
+
+@keyframes open-guide {
+    from {transform: translateX(222px);}
+    to {transform: translateX(0px);}
+}
+
+@keyframes close-guide {
+    from {transform: translateX(0px);}
+    to {transform: translateX(222px);}
+}
+
+#guide {
+    height: 100vh;
+    width: 222px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translateX(222px);
+    z-index: 3;
+    animation-name: none;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#x-icon-3 {
+    height: 1em;
+    width: 1em;
+}
+
+#close-guide-btn {
+    display: none;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    z-index: 4;
+    width: 2em;
+    height: 2em;
+    top: .3em;
+    right: .3em;
 }
 
 

@@ -27,6 +27,17 @@ $('#close-channels-btn').click(function(){
     $('#open-guide-btn').fadeOut(600)
 })
 
+$('#open-guide-btn').click(function(){
+    $('#guide').css('animation-name', 'open-guide')
+    $('#close-guide-btn').fadeIn(2100)
+    $('#close-guide-btn').css('display', 'flex')
+})
+
+$('#close-guide-btn').click(function(){
+    $('#guide').css('animation-name', 'close-guide')
+    $('#close-guide-btn').fadeOut(600)
+})
+
 $(document).ready(function () {
         // Array of strings for subtitles
         var subtitles = [
